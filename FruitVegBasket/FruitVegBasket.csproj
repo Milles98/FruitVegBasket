@@ -64,4 +64,35 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <None Remove="Resources\Images\Food\butter_cheese.jpg" />
+      <MauiImage Include="Resources\Images\Food\butter_cheese.jpg" />
+      <None Remove="Resources\Images\Food\dairy.jpg" />
+      <MauiImage Include="Resources\Images\Food\dairy.jpg" />
+      <None Remove="Resources\Images\Food\eggs.jpg" />
+      <MauiImage Include="Resources\Images\Food\eggs.jpg" />
+      <None Remove="Resources\Images\Food\eggs_meat.jpg" />
+      <MauiImage Include="Resources\Images\Food\eggs_meat.jpg" />
+      <None Remove="Resources\Images\Food\exotic_fruits.jpg" />
+      <MauiImage Include="Resources\Images\Food\exotic_fruits.jpg" />
+      <None Remove="Resources\Images\Food\fruits.jpg" />
+      <MauiImage Include="Resources\Images\Food\fruits.jpg" />
+      <None Remove="Resources\Images\Food\green_vegetables.jpg" />
+      <MauiImage Include="Resources\Images\Food\green_vegetables.jpg" />
+      <None Remove="Resources\Images\Food\leafy_vegetables.jpg" />
+      <MauiImage Include="Resources\Images\Food\leafy_vegetables.jpg" />
+      <None Remove="Resources\Images\Food\meat.jpg" />
+      <MauiImage Include="Resources\Images\Food\meat.jpg" />
+      <None Remove="Resources\Images\Food\milk_curd_yoghurt.jpg" />
+      <MauiImage Include="Resources\Images\Food\milk_curd_yoghurt.jpg" />
+      <None Remove="Resources\Images\Food\salads.jpg" />
+      <MauiImage Include="Resources\Images\Food\salads.jpg" />
+      <None Remove="Resources\Images\Food\seafood.jpg" />
+      <MauiImage Include="Resources\Images\Food\seafood.jpg" />
+      <None Remove="Resources\Images\Food\seasonal_fruits.jpg" />
+      <MauiImage Include="Resources\Images\Food\seasonal_fruits.jpg" />
+      <None Remove="Resources\Images\Food\vegetables.jpg" />
+      <MauiImage Include="Resources\Images\Food\vegetables.jpg" />
+    </ItemGroup>
+
 </Project>
