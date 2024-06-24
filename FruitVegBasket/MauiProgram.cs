@@ -1,5 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using FruitVegBasket.Pages;
+using FruitVegBasket.Services;
+using FruitVegBasket.ViewModels;
 
 namespace FruitVegBasket;
 
@@ -14,6 +17,9 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             })
             .UseMauiCommunityToolkit();
+        builder.Services.AddSingleton<CategoryService>();
+        builder.Services.AddSingleton<HomePageViewModel>();
+        builder.Services.AddSingleton<HomePage>();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
