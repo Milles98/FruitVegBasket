@@ -101,6 +101,12 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+            
+            <BoxView HeightRequest="15"
+                     BackgroundColor="Transparent" />
+            
+            <Label Text="Popular"
+                   Style="{StaticResource H2}"></Label>
 
         </VerticalStackLayout>
 
