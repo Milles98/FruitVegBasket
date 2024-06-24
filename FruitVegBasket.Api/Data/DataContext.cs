@@ -29,5 +29,7 @@ public class DataContext : DbContext
     {
         modelBuilder.Entity<Role>().HasData(Role.GetInitialRoles());
         modelBuilder.Entity<User>().HasData(User.GetInitialUsers());
+        modelBuilder.Entity<Category>().HasData(Category.GetInitialCategories());
+        modelBuilder.Entity<Offer>().HasData(Offer.GetInitialOffers());
     }
 }

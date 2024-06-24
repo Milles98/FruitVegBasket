@@ -14,19 +14,4 @@ public class Offer
         Code = code;
         BgColor = bgColor;
     }
-
-    private static readonly string[] _lightColors = new string[]
-    {
-        "#e1f1e7", "#dad1f9", "#ffff00", "#d0f200", "#e28083", "#7fbdc7", "#ea978d"
-    };
-
-    private static Color RandomColor => Color.FromHex(_lightColors.OrderBy(c => Guid.NewGuid()).First());
-
-    public static IEnumerable<Offer> GetOffers()
-    {
-        yield return new Offer("Up to 30% off", "Enjoy up to 30% off on all fruits", RandomColor, "FRT30");
-        yield return new Offer("Green Veg Big Sale 50% OFF", "Enjoy our big offer of 50% off all green vegetables", RandomColor, "VEG50");
-        yield return new Offer("Flat 100 OFF", "Flat Rs. 100 off on all exotic fruits and vegetables", RandomColor, "EXT100");
-        yield return new Offer("25% OFF on Seasonal Fruits", "Enjoy 25% off on all seasonal fruits", RandomColor, "FRT25");
-    }
 }
