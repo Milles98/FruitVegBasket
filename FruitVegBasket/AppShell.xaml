@@ -7,10 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:pages="clr-namespace:FruitVegBasket.Pages"
+    Shell.TabBarBackgroundColor="{StaticResource Mid}"
+    Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.BackgroundColor="{StaticResource Mid}"
     Title="FruitVegBasket">
     
     <Shell.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"></toolkit:StatusBarBehavior>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"/>
     </Shell.Behaviors>
 
     <!-- <ShellContent -->
@@ -20,23 +23,23 @@
     
     <TabBar>
         <ShellContent Title="Home"
-                      Icon="dotnet_bot"
+                      Icon="bxs_home"
                       ContentTemplate="{DataTemplate pages:HomePage}"
                       Route="HomePage"/>
         <ShellContent Title="Categories"
-                      Icon="dotnet_bot"
+                      Icon="bx_category"
                       ContentTemplate="{DataTemplate pages:CategoriesPage}"
                       Route="CategoriesPage"/>
         <ShellContent Title="Orders"
-                      Icon="dotnet_bot"
+                      Icon="bx_list"
                       ContentTemplate="{DataTemplate pages:OrdersPage}"
                       Route="OrdersPage"/>
         <ShellContent Title="Profile"
-                      Icon="dotnet_bot"
+                      Icon="bx_user"
                       ContentTemplate="{DataTemplate pages:ProfilePage}"
                       Route="ProfilePage"/>
         <ShellContent Title="Help"
-                      Icon="dotnet_bot"
+                      Icon="bx_help"
                       ContentTemplate="{DataTemplate pages:HelpPage}"
                       Route="HelpPage"/>
     </TabBar>
