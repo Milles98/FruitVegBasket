@@ -95,4 +95,8 @@
       <MauiImage Include="Resources\Images\Food\vegetables.jpg" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\FruitVegBasket.Shared\FruitVegBasket.Shared.csproj" />
+    </ItemGroup>
+
 </Project>
