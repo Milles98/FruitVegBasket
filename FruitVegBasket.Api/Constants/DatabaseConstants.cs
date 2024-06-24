@@ -2,6 +2,7 @@
 
 public static class DatabaseConstants
 {
+    public const string GroceryConnectionStringKey = "Grocery";
     public static class Roles
     {
         public static class Admin
