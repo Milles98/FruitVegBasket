@@ -9,6 +9,7 @@
     xmlns:pages="clr-namespace:FruitVegBasket.Pages"
     Shell.TabBarBackgroundColor="{StaticResource Mid}"
     Shell.TabBarTitleColor="{StaticResource White}"
+    Shell.TabBarForegroundColor="{StaticResource White}"
     Shell.BackgroundColor="{StaticResource Mid}"
     Title="FruitVegBasket">
     
@@ -20,7 +21,6 @@
     <!--     Title="FruitVeg Basket" -->
     <!--     ContentTemplate="{DataTemplate local:MainPage}" -->
     <!--     Route="MainPage" /> -->
-    
     <TabBar>
         <ShellContent Title="Home"
                       Icon="bxs_home"
