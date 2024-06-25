@@ -4,6 +4,7 @@ using FruitVegBasket.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FruitVegBasket.Api.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20240625065525_new")]
+    partial class @new
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -80,8 +83,8 @@ namespace FruitVegBasket.Api.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<short>("ParentId")
                         .HasColumnType("smallint");
@@ -253,7 +256,7 @@ namespace FruitVegBasket.Api.Data.Migrations
                         new
                         {
                             Id = 2,
-                            BgColor = "#dad1f9",
+                            BgColor = "#e28083",
                             Code = "50OFF",
                             Description = "Enjoy our big offer of 50% off on all green vegetables",
                             IsActive = false,
@@ -262,7 +265,7 @@ namespace FruitVegBasket.Api.Data.Migrations
                         new
                         {
                             Id = 3,
-                            BgColor = "#ea978d",
+                            BgColor = "#e1f1e7",
                             Code = "EXT100",
                             Description = "Flat Rs. 100 off on all exotic fruits and vegetables",
                             IsActive = false,
@@ -271,7 +274,7 @@ namespace FruitVegBasket.Api.Data.Migrations
                         new
                         {
                             Id = 4,
-                            BgColor = "#e28083",
+                            BgColor = "#dad1f9",
                             Code = "FRT25",
                             Description = "Enjoy 25% off on all seasonal fruits",
                             IsActive = false,

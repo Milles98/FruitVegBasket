@@ -1,6 +1,7 @@
-﻿namespace FruitVegBasket.Interfaces;
-
-public interface IPlatformHttpMessageHandler
+﻿namespace FruitVegBasket.Interfaces
 {
-    HttpMessageHandler GetHttpMessageHandler();
+    public interface IPlatformHttpMessageHandler
+    {
+        HttpMessageHandler GetHttpMessageHandler();
+    }
 }

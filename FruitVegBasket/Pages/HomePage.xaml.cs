@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FruitVegBasket.ViewModels;
+﻿using FruitVegBasket.ViewModels;
 
 namespace FruitVegBasket.Pages;
 
@@ -21,6 +16,6 @@ public partial class HomePage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        // await _viewModel.InitializeAsync();
+        await _viewModel.InitializeAsync();
     }
 }

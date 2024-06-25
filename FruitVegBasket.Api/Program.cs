@@ -9,9 +9,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<DataContext>(options => options
-    .UseSqlServer(builder.Configuration
-        .GetConnectionString(DatabaseConstants.GroceryConnectionStringKey)));
+builder.Services.AddDbContext<DataContext>(options => 
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString(DatabaseConstants.GroceryConnectionStringKey)));
 
 var app = builder.Build();
 

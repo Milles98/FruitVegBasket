@@ -1,17 +1,10 @@
-﻿namespace FruitVegBasket.Models;
-
-public class Offer
+﻿namespace FruitVegBasket.Models
 {
-    public string Title { get; set; }
-    public string Description { get; set; }
-    public string Code { get; set; }
-    public Color BgColor { get; set; }
-
-    public Offer(string title, string description, Color bgColor, string code)
+    public class Offer
     {
-        Title = title;
-        Description = description;
-        Code = code;
-        BgColor = bgColor;
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Code { get; set; }
+        public string BgColor { get; set; }
     }
 }
