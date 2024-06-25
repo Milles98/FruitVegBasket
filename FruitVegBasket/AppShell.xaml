@@ -10,36 +10,35 @@
     Shell.TabBarBackgroundColor="{StaticResource Mid}"
     Shell.TabBarTitleColor="{StaticResource White}"
     Shell.TabBarForegroundColor="{StaticResource White}"
-    Shell.BackgroundColor="{StaticResource Mid}"
-    Title="FruitVegBasket">
-    
-    <Shell.Behaviors>
-        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}"/>
-    </Shell.Behaviors>
+    Shell.BackgroundColor="{StaticResource Mid}">
 
-    <!-- <ShellContent -->
-    <!--     Title="FruitVeg Basket" -->
-    <!--     ContentTemplate="{DataTemplate local:MainPage}" -->
-    <!--     Route="MainPage" /> -->
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{StaticResource Primary}" />
+    </Shell.Behaviors>
+    
+    <!--<ShellContent
+        Title="FruitVeg Basket"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />-->
     <TabBar>
         <ShellContent Title="Home"
                       Icon="bxs_home"
                       ContentTemplate="{DataTemplate pages:HomePage}"
                       Route="HomePage"/>
         <ShellContent Title="Categories"
-                      Icon="bx_category"
+                      Icon="bxs_category"
                       ContentTemplate="{DataTemplate pages:CategoriesPage}"
                       Route="CategoriesPage"/>
         <ShellContent Title="Orders"
-                      Icon="bx_list"
+                      Icon="bxs_list"
                       ContentTemplate="{DataTemplate pages:OrdersPage}"
                       Route="OrdersPage"/>
         <ShellContent Title="Profile"
-                      Icon="bx_user"
+                      Icon="bxs_user"
                       ContentTemplate="{DataTemplate pages:ProfilePage}"
                       Route="ProfilePage"/>
         <ShellContent Title="Help"
-                      Icon="bx_help"
+                      Icon="bxs_help"
                       ContentTemplate="{DataTemplate pages:HelpPage}"
                       Route="HelpPage"/>
     </TabBar>

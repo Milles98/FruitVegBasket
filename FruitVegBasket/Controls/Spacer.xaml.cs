@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FruitVegBasket.Controls;
+﻿namespace FruitVegBasket.Controls;
 
 public partial class Spacer : ContentView
 {
@@ -13,7 +7,7 @@ public partial class Spacer : ContentView
         InitializeComponent();
     }
 
-    public static readonly BindableProperty SpaceProperty =
+    public static readonly BindableProperty SpaceProperty = 
         BindableProperty.Create(nameof(Space), typeof(int), typeof(Spacer), defaultValue: 10);
 
     public int Space
@@ -21,4 +15,5 @@ public partial class Spacer : ContentView
         get => (int)GetValue(SpaceProperty);
         set => SetValue(SpaceProperty, value);
     }
+
 }

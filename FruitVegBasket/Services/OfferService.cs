@@ -1,31 +1,36 @@
-﻿using System.Text.Json;
-using FruitVegBasket.Constants;
+﻿using FruitVegBasket.Constants;
 using FruitVegBasket.Models;
+using System.Text.Json;
 
-namespace FruitVegBasket.Services;
-
-public class OfferService
+namespace FruitVegBasket.Services
 {
-    private readonly IHttpClientFactory _httpClientFactory;
-
-    public OfferService(IHttpClientFactory httpClientFactory)
+    public class OffersService
     {
-        _httpClientFactory = httpClientFactory;
-    }
+        private readonly IHttpClientFactory _httpClientFactory;
 
-    public async Task<IEnumerable<Offer>> GetActiveOffersAsync()
-    {
-        var httpClient = _httpClientFactory.CreateClient(AppConstants.HttpClientName);
-        var response = await httpClient.GetAsync("/masters/offers");
-        if (response.IsSuccessStatusCode)
+        public OffersService(IHttpClientFactory httpClientFactory)
         {
-            var content = await response.Content.ReadAsStringAsync();
-            if (!string.IsNullOrEmpty(content))
-            {
-                return JsonSerializer.Deserialize<IEnumerable<Offer>?>(content);
-            }
+            _httpClientFactory = httpClientFactory;
         }
 
-        return Enumerable.Empty<Offer>();
+        public async Task<IEnumerable<Offer>?> GetActiveOffersAsync()
+        {
+            var httpClient = _httpClientFactory.CreateClient(AppConstants.HttpClientName);
+
+            var response = await httpClient.GetAsync("/masters/offers");
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                if (!string.IsNullOrEmpty(content))
+                {
+                    return JsonSerializer.Deserialize<IEnumerable<Offer>>(content, new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+                }
+            }
+
+            return Enumerable.Empty<Offer>();
+        }
     }
 }
